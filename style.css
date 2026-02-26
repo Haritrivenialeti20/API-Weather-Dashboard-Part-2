@@ -1,0 +1,158 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #1e3c72;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Search Section Styles */
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+#city-input:focus {
+    outline: none;
+    border-color: #2a5298;
+}
+
+#search-btn {
+    padding: 12px 25px;
+    background: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+}
+
+#search-btn:hover {
+    background: #1e3c72;
+}
+
+#search-btn:active {
+    transform: scale(0.98);
+}
+
+#search-btn:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error Message Styles */
+.error-message {
+    background: #fee;
+    color: #c00;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+    border: 1px solid #fcc;
+}
+
+.error-message.show {
+    display: block;
+}
+
+/* Loading Spinner Styles */
+.loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.loading.show {
+    display: flex;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #2a5298;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Weather Display Styles */
+.weather-display {
+    display: none;
+}
+
+.weather-display.show {
+    display: block;
+}
+
+.weather-info {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.weather-info h2 {
+    color: #1e3c72;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.weather-info p {
+    color: #555;
+    font-size: 1.1rem;
+    margin: 8px 0;
+}
+
+.weather-info p:first-of-type {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2a5298;
+    margin: 20px 0;
+}
